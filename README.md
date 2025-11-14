@@ -56,6 +56,7 @@
     | `messages` | `user_id` (TEXT), `message_id` (TEXT), `text` (TEXT), `date` (INTEGER), PRIMARY KEY (`user_id`, `message_id`) |
 
     -- ① users 表
+
 CREATE TABLE IF NOT EXISTS users (
     user_id TEXT PRIMARY KEY,
     topic_id TEXT,
@@ -66,12 +67,14 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- ② config 表
+
 CREATE TABLE IF NOT EXISTS config (
     key TEXT PRIMARY KEY,
     value TEXT
 );
 
 -- ③ messages 表
+
 CREATE TABLE IF NOT EXISTS messages (
     user_id TEXT,
     message_id TEXT,
